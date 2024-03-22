@@ -30,6 +30,12 @@ class JogoFinanceiro:
         self.label_rodada = tk.Label(self.root, text=f"Rodada: {self.rodada}", font=("Arial", 15))
         self.label_rodada.pack(pady=5)
 
+        self.label_rodadas_sem_deposito = tk.Label(self.root, text=f"Rodadas sem depósito: {self.rodadas_sem_deposito}", font=("Arial", 12))
+        self.label_rodadas_sem_deposito.pack(side=tk.LEFT, padx=10)
+        
+        self.label_multiplicador = tk.Label(self.root, text=f"Multiplicador atual: x1.0", font=("Arial", 12))
+        self.label_multiplicador.pack(side=tk.RIGHT, padx=10)
+
         # Botões
         self.botao_trabalhar = tk.Button(self.root, text="Trabalhar", command=self.trabalhar, width=30, font=('Arial', 12))
         self.botao_trabalhar.pack(pady=50)
@@ -52,18 +58,34 @@ class JogoFinanceiro:
     def trabalhar(self):
         rendimentos = ["péssimo", "ruim", "bom", "ótimo", "excelente"]
         rendimento = random.choice(rendimentos)
-        ganhos = {"péssimo": 20, "ruim": 30, "bom": 30, "ótimo": 130, "excelente": 230}
+        ganhos = {"péssimo": 50, "ruim": 70, "bom": 100, "ótimo": 200, "excelente": 400}
 
-        ganho = ganhos[rendimento]
-        self.dinheiro_comigo += ganho
+        ganho_base = ganhos[rendimento]
+
+        # Verifica se o jogador possui carros e aplica os multiplicadores correspondentes
+        multiplicador = 1.0  # Define o multiplicador como 1.0 por padrão
+        if 1 in self.carros_comprados:  # Se o jogador possui o Carro 1 (Palio)
+            multiplicador = 2
+        elif 2 in self.carros_comprados:  # Se o jogador possui o Carro 2 (Onix)
+            multiplicador = 3
+        elif 3 in self.carros_comprados:  # Se o jogador possui o Carro 3 (Mercedes)
+            multiplicador = 5
+
+        # Calcula o ganho final multiplicando o ganho base pelo multiplicador
+        ganho_final = ganho_base * multiplicador
+
+        # Atualiza o saldo do jogador e os labels
+        self.dinheiro_comigo += ganho_final
+        self.rodadas_sem_deposito += 1
         self.atualizar_labels()
-        sd.messagebox.showinfo("Trabalho", f"Seu rendimento foi: {rendimento}\nGanhos: {ganho}")
+        sd.messagebox.showinfo("Trabalho", f"Seu rendimento foi: {rendimento}\nGanhos: {ganho_final}")
 
     def sacar(self):
         quantia = sd.askinteger("Saque", "Quantos coins você quer sacar?")
         if quantia is not None and quantia <= self.dinheiro_banco:
             self.dinheiro_banco -= quantia
             self.dinheiro_comigo += quantia
+            self.rodadas_sem_deposito += 1
             self.atualizar_labels()
         elif quantia is not None:
             sd.messagebox.showerror("Erro", "Saldo insuficiente")
@@ -73,8 +95,9 @@ class JogoFinanceiro:
         if quantia is not None and quantia > 0 and quantia <= self.dinheiro_comigo:
             self.dinheiro_comigo -= quantia
             self.dinheiro_banco += quantia
+            self.rodadas_sem_deposito = 0  # Resetando o contador de rodadas sem depósito
             self.atualizar_labels()
-            self.rodadas_sem_deposito = 0
+            sd.messagebox.showinfo("Depósito", "Depósito feito. As rodadas sem depósito foram resetadas.")
         elif quantia is not None:
             sd.messagebox.showerror("Erro", "Quantidade inválida ou saldo insuficiente!")
 
@@ -85,14 +108,28 @@ class JogoFinanceiro:
             if resultado == "ganhou":
                 ganho = quantia * 2
                 self.dinheiro_comigo += ganho
+                self.rodadas_sem_deposito += 1
                 self.atualizar_labels()
                 sd.messagebox.showinfo("Investimento", f"Você ganhou {ganho} coins!")
             else:
                 self.dinheiro_comigo -= quantia
+                self.rodadas_sem_deposito += 1
                 self.atualizar_labels()
                 sd.messagebox.showinfo("Investimento", f"Você perdeu {quantia} coins!")
+            
         elif quantia is not None:
             sd.messagebox.showerror("Erro", "Quantidade inválida ou saldo insuficiente!")
+
+    def ladrao(self):
+        if self.rodadas_sem_deposito % 5 == 0:
+            chance_roubo = random.randint(0, 1)
+            if chance_roubo == 1:
+                valor_roubado = random.randint(50, 200)
+                self.dinheiro_comigo -= valor_roubado
+                self.atualizar_labels()
+                sd.messagebox.showinfo("Alerta de Roubo", f"Um ladrão apareceu e roubou {valor_roubado} coins!")
+            else:
+                sd.messagebox.showinfo("Alerta", "Um ladrão apareceu, mas você escapou ileso.")
 
     def atualizar_labels(self):
         self.label_dinheiro_comigo.config(text=f"Saldo com você: {self.dinheiro_comigo} coins")
@@ -101,14 +138,28 @@ class JogoFinanceiro:
         self.rodada += 1
         self.label_rodada.config(text=f"Rodada: {self.rodada}")
 
-        self.rodadas_sem_deposito += 1
+        self.label_rodadas_sem_deposito.config(text=f"Rodadas sem depósito: {self.rodadas_sem_deposito}")
+        self.label_multiplicador.config(text=f"Multiplicador atual: x{self.obter_multiplicador()}")
 
-        if self.rodada % 5 == 0:
-            self.ladrao()
+        if self.rodada % 5 == 0:  # Se a rodada atual for múltiplo de 5
+            if self.rodadas_sem_deposito == 0:  # Se não houve depósito nas últimas 5 rodadas
+                self.ladrao()
+            else:
+                self.rodadas_sem_deposito = 0
 
         if len(self.carros_comprados) == 3:
             sd.messagebox.showinfo("Parabéns!", "Você comprou todos os carros! Você ganhou o jogo.")
             self.root.quit()
+
+    def obter_multiplicador(self):
+        if 1 in self.carros_comprados:  # Se o jogador possui o Carro 1 (Palio)
+            return 2
+        elif 2 in self.carros_comprados:  # Se o jogador possui o Carro 2 (Onix)
+            return 3
+        elif 3 in self.carros_comprados:  # Se o jogador possui o Carro 3 (Mercedes)
+            return 5
+        else:
+            return 1.0
 
     def criar_janela_compra(self):
         self.janela_compra = tk.Toplevel(self.root)
@@ -117,12 +168,12 @@ class JogoFinanceiro:
         self.label_titulo_compra = tk.Label(self.janela_compra, text="Loja de Carros", font=("Arial", 16, "bold"))
         self.label_titulo_compra.pack(pady=10)
 
-        self.label_carro1 = tk.Label(self.janela_compra, text="Carro 1: Palio - Preço: 3000 coins", font=("Arial", 12))
+        self.label_carro1 = tk.Label(self.janela_compra, text="Carro 1: Palio - Preço: 1000 coins", font=("Arial", 12))
         self.label_carro1.pack(pady=5)
         self.botao_comprar_carro1 = tk.Button(self.janela_compra, text="Comprar Carro 1", command=lambda: self.comprar_carro(1))
         self.botao_comprar_carro1.pack(pady=5)
 
-        self.label_carro2 = tk.Label(self.janela_compra, text="Carro 2: Onix - Preço: 3000 coins", font=("Arial", 12))
+        self.label_carro2 = tk.Label(self.janela_compra, text="Carro 2: Onix - Preço: 5000 coins", font=("Arial", 12))
         self.label_carro2.pack(pady=5)
         self.botao_comprar_carro2 = tk.Button(self.janela_compra, text="Comprar Carro 2", command=lambda: self.comprar_carro(2))
         self.botao_comprar_carro2.pack(pady=5)
@@ -135,12 +186,13 @@ class JogoFinanceiro:
         self.label_aviso = tk.Label(self.janela_compra, text="", font=("Arial", 12))
         self.label_aviso.pack(pady=5)
 
-
+    
     def comprar_carro(self, carro):
+        preco = 0
         if carro == 1:
-            preco = 3000
+            preco = 1000
         elif carro == 2:
-            preco = 3000
+            preco = 5000
         elif carro == 3:
             preco = 20000
 
@@ -148,12 +200,19 @@ class JogoFinanceiro:
             self.dinheiro_comigo -= preco
             self.atualizar_labels()
             self.carros_comprados.append(carro)  # Adiciona o carro à lista de carros comprados
+            multiplicador = 1.0
+            if 1 in self.carros_comprados:
+                multiplicador = 2
+            elif 2 in self.carros_comprados:
+                multiplicador = 3
+            elif 3 in self.carros_comprados:
+                multiplicador = 5
+            self.label_multiplicador.config(text=f"Multiplicador atual: x{multiplicador}")
             self.label_aviso.config(text=f"Você comprou o Carro {carro}!")
         else:
             self.label_aviso.config(text="Saldo insuficiente para comprar este carro!")
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     root = tk.Tk()
     app = JogoFinanceiro(root)
     root.mainloop()
-
