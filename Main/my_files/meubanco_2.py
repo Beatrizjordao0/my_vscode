@@ -126,10 +126,14 @@ class JogoFinanceiro:
             if chance_roubo == 1:
                 valor_roubado = random.randint(50, 200)
                 self.dinheiro_comigo -= valor_roubado
-                self.atualizar_labels()
+                self.rodadas_sem_deposito -= 1
                 sd.messagebox.showinfo("Alerta de Roubo", f"Um ladrão apareceu e roubou {valor_roubado} coins!")
+                self.atualizar_labels()
+                
             else:
                 sd.messagebox.showinfo("Alerta", "Um ladrão apareceu, mas você escapou ileso.")
+                self.rodadas_sem_deposito -= 1
+                self.atualizar_labels()
 
     def atualizar_labels(self):
         self.label_dinheiro_comigo.config(text=f"Saldo com você: {self.dinheiro_comigo} coins")
