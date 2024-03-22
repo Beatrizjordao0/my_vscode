@@ -121,7 +121,7 @@ class JogoFinanceiro:
             sd.messagebox.showerror("Erro", "Quantidade inválida ou saldo insuficiente!")
 
     def ladrao(self):
-        if self.rodadas_sem_deposito % 5 == 0:
+        if self.rodadas_sem_deposito == 5:
             chance_roubo = random.randint(0, 1)
             if chance_roubo == 1:
                 valor_roubado = random.randint(50, 200)
@@ -141,11 +141,9 @@ class JogoFinanceiro:
         self.label_rodadas_sem_deposito.config(text=f"Rodadas sem depósito: {self.rodadas_sem_deposito}")
         self.label_multiplicador.config(text=f"Multiplicador atual: x{self.obter_multiplicador()}")
 
-        if self.rodada % 5 == 0:  # Se a rodada atual for múltiplo de 5
-            if self.rodadas_sem_deposito == 0:  # Se não houve depósito nas últimas 5 rodadas
-                self.ladrao()
-            else:
-                self.rodadas_sem_deposito = 0
+        if self.rodadas_sem_deposito == 5:  # Se a rodada atual for múltiplo de 5
+            self.ladrao()
+            
 
         if len(self.carros_comprados) == 3:
             sd.messagebox.showinfo("Parabéns!", "Você comprou todos os carros! Você ganhou o jogo.")
