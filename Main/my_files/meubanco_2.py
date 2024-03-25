@@ -13,7 +13,6 @@ class JogoFinanceiro:
         self.rodada = 1
         self.rodadas_sem_deposito = 0
         self.carros_comprados = []
-        
 
         self.criar_interface()
 
