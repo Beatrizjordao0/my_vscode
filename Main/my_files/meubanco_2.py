@@ -13,6 +13,7 @@ class JogoFinanceiro:
         self.rodada = 1
         self.rodadas_sem_deposito = 0
         self.carros_comprados = []
+        
 
         self.criar_interface()
 
@@ -64,12 +65,12 @@ class JogoFinanceiro:
 
         # Verifica se o jogador possui carros e aplica os multiplicadores correspondentes
         multiplicador = 1.0  # Define o multiplicador como 1.0 por padrão
-        if 1 in self.carros_comprados:  # Se o jogador possui o Carro 1 (Palio)
-            multiplicador = 2
+        if 3 in self.carros_comprados:  # Se o jogador possui o Carro 1 (Palio)
+            multiplicador = 5
         elif 2 in self.carros_comprados:  # Se o jogador possui o Carro 2 (Onix)
             multiplicador = 3
-        elif 3 in self.carros_comprados:  # Se o jogador possui o Carro 3 (Mercedes)
-            multiplicador = 5
+        elif 1 in self.carros_comprados:  # Se o jogador possui o Carro 3 (Mercedes)
+            multiplicador = 2
 
         # Calcula o ganho final multiplicando o ganho base pelo multiplicador
         ganho_final = ganho_base * multiplicador
@@ -154,12 +155,13 @@ class JogoFinanceiro:
 
 
     def obter_multiplicador(self):
-        if 1 in self.carros_comprados:  # Se o jogador possui o Carro 1 (Palio)
-            return 2
+        
+        if 3 in self.carros_comprados:  # Se o jogador possui o Carro 1 (Palio)
+            return 5
         elif 2 in self.carros_comprados:  # Se o jogador possui o Carro 2 (Onix)
             return 3
-        elif 3 in self.carros_comprados:  # Se o jogador possui o Carro 3 (Mercedes)
-            return 5
+        elif 1 in self.carros_comprados:  # Se o jogador possui o Carro 3 (Mercedes)
+            return 2
         else:
             return 1.0
 
