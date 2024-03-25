@@ -147,11 +147,11 @@ class JogoFinanceiro:
 
         if self.rodadas_sem_deposito == 5:  # Se a rodada atual for múltiplo de 5
             self.ladrao()
-            
 
         if len(self.carros_comprados) == 3:
             sd.messagebox.showinfo("Parabéns!", "Você comprou todos os carros! Você ganhou o jogo.")
             self.root.quit()
+
 
     def obter_multiplicador(self):
         if 1 in self.carros_comprados:  # Se o jogador possui o Carro 1 (Palio)
@@ -188,6 +188,11 @@ class JogoFinanceiro:
         self.label_aviso = tk.Label(self.janela_compra, text="", font=("Arial", 12))
         self.label_aviso.pack(pady=5)
 
+    def atualizar_multiplicador(self):
+        multiplicador = self.obter_multiplicador()
+        self.label_multiplicador.config(text=f"Multiplicador atual: x{multiplicador}")
+
+
     
     def comprar_carro(self, carro):
         preco = 0
@@ -200,19 +205,20 @@ class JogoFinanceiro:
 
         if self.dinheiro_comigo >= preco:
             self.dinheiro_comigo -= preco
-            self.atualizar_labels()
             self.carros_comprados.append(carro)  # Adiciona o carro à lista de carros comprados
-            multiplicador = 1.0
-            if 1 in self.carros_comprados:
-                multiplicador = 2
-            elif 2 in self.carros_comprados:
-                multiplicador = 3
-            elif 3 in self.carros_comprados:
-                multiplicador = 5
-            self.label_multiplicador.config(text=f"Multiplicador atual: x{multiplicador}")
+
+            # Atualiza o multiplicador
+            self.atualizar_multiplicador()
+
+            # Atualiza a label de aviso
             self.label_aviso.config(text=f"Você comprou o Carro {carro}!")
+
+            # Atualiza os labels de saldo
+            self.atualizar_labels()
         else:
             self.label_aviso.config(text="Saldo insuficiente para comprar este carro!")
+
+
 
 if __name__ == '__main__':
     root = tk.Tk()
