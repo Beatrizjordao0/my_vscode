@@ -6,6 +6,7 @@
 from tkinter import *
 
 window = Tk()        # cria a instância da janela
+
 window.geometry('500x500')           # geometria da janela(tamanho e proporção)
 window.title('to aprendendo TK')           # Título da janela
 
@@ -14,7 +15,6 @@ window.iconphoto(True,icon)            # adiciona a foto à janela
 
 window.config(background='#2c403f')      # Configura a cor da tela
 
+window.mainloop()       # chama a janela
 
-
-
-window.mainloop()       #chama a janela
+#--------------------------------------------------------------------------------------------------------
