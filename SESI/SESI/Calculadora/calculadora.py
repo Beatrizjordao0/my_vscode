@@ -5,7 +5,7 @@
 #   Passo 2: formar as 4 operações: Divisão, Multiplicação, Subtração, Adição
 #   Passo 3: Aplicar e mostrar ao usuário a resposta da operação entre os x números
 import time
-import calculos
+import SESI.SESI.Calculadora.calculos as calculos
 from colorama import Fore, Style
 #-----------------------------------------------------------------------------------
 texto = (f'Digite {Fore.RED}soma {Style.RESET_ALL}para somar, {Fore.YELLOW}subtração {Style.RESET_ALL}'
