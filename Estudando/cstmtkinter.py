@@ -1,8 +1,8 @@
-from customtkinter import *
+import customtkinter
 
-wd = CTk()
-wd.geometry('500x500')
-label = CTkLabel
+wd = customtkinter.CTk()
+
+
 
 
 wd.mainloop()
