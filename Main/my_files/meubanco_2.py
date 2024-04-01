@@ -1,7 +1,7 @@
 import tkinter as tk
 import tkinter.simpledialog as sd
 import random
-import customtkinter
+
 
 class JogoFinanceiro:
     def __init__(self, root):

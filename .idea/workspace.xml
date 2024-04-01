@@ -4,7 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="466b5944-ffe6-460d-ab1a-c9132507ba61" name="Changes" comment="hi" />
+    <list default="true" id="466b5944-ffe6-460d-ab1a-c9132507ba61" name="Changes" comment="hi">
+      <change afterPath="$PROJECT_DIR$/Coisas_do_SESI/Calculadora/Módulo_operações.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coisas_do_SESI/Calculadora/principal.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PycharmProjects.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PycharmProjects.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/my_files/meubanco_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main/my_files/meubanco_2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SESI/SESI/Calculadora/Módulo_operações.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SESI/SESI/Calculadora/principal.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SESI/SESI/Pequenas atividades/Adulto_ou_nao.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SESI/SESI/Pequenas atividades/Arvore_natal.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SESI/SESI/Pequenas atividades/Escola2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SESI/SESI/Pequenas atividades/Numero_primo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SESI/SESI/Pequenas atividades/crime.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SESI/SESI/Pequenas atividades/dias_da_semana.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SESI/SESI/Pequenas atividades/empresa.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SESI/SESI/Pequenas atividades/escola.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SESI/SESI/Pequenas atividades/número_maior_menor.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SESI/SESI/Pequenas atividades/palavra.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SESI/SESI/Pequenas atividades/todos_os_pares.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SESI/SESI/Pequenas atividades/vogal.py" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,12 +46,12 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Beatrizjordao0"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Beatrizjordao0&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -46,23 +67,27 @@
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2eEf2Hi1kOoEEnKp9NaGkWDBpQo" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Python.meubanco_2.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;my__pycharm&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/beatr/OneDrive/Área de Trabalho/pycharm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Python.calculadora.executor": "Run",
+    "Python.meubanco_2.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "my__pycharm",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/beatr/OneDrive/Área de Trabalho/pycharm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="meubanco_2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PycharmProjects" />
@@ -73,8 +98,9 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.12 (Main)" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Main/my_files" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Main/my_files/meubanco_2.py" />
@@ -95,7 +121,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-d68999036c7f-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.14475.56" />
+        <option value="bundled-python-sdk-09665e90c3a7-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.15026.15" />
       </set>
     </attachedChunks>
   </component>
@@ -139,6 +165,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="hi" />
     <option name="LAST_COMMIT_MESSAGE" value="hi" />
   </component>

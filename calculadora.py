@@ -5,7 +5,7 @@
 #   Passo 2: formar as 4 operações: Divisão, Multiplicação, Subtração, Adição
 #   Passo 3: Aplicar e mostrar ao usuário a resposta da operação entre os x números
 import time
-import Módulo_operações
+import calculos
 from colorama import Fore, Style
 #-----------------------------------------------------------------------------------
 texto = (f'Digite {Fore.RED}soma {Style.RESET_ALL}para somar, {Fore.YELLOW}subtração {Style.RESET_ALL}'
@@ -22,22 +22,22 @@ print('lembre se de escrever do jeito que eu lhe digo para fazer. Se tentares fa
       'Boa sorte.')
 
 while True:
-    qntd = Módulo_operações.quantidade()
+    qntd = calculos.quantidade()
     operacao = input('Digite aqui a operação que você quer fazer, ou digite S para sair\n')
     if operacao == 'soma' or operacao == 'Soma':
-        soma = Módulo_operações.adicao(qntd)
+        soma = calculos.adicao(qntd)
         print(f'{Fore.YELLOW}A soma dos números é: {soma}{Style.RESET_ALL}')
 
     elif operacao == 'subtração' or operacao == 'Subtração':
-        subtracao = Módulo_operações.subtracao(qntd)
+        subtracao = calculos.subtracao(qntd)
         print(f'{Fore.RED}A subtração dos números é: {subtracao}{Style.RESET_ALL}')
 
     elif operacao == 'multiplicação' or operacao == 'Multiplicação':
-        multiplicação = Módulo_operações.multiplicacao(qntd)
+        multiplicação = calculos.multiplicacao(qntd)
         print(f'{Fore.GREEN}A multiplicação entre os números é: {multiplicação}{Style.RESET_ALL}')
 
     elif operacao == 'Divisão' or operacao == 'divisão':
-        divisao = Módulo_operações.divisao(qntd)
+        divisao = calculos.divisao(qntd)
         print(f'{Fore.BLUE}A divisão entre os números é: {divisao}{Style.RESET_ALL}')
 
     elif operacao == 'S' or operacao == 's':
