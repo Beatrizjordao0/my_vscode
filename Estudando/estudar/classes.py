@@ -1,19 +1,38 @@
-# Ao criar uma classe estamos trazendo um objeto do mundo para a programação
-# Criamos a classe de um objeto que quisermos e dizemos seus atributos e o que eles fazem(métodos).
+# Quando falamos de OOP,
+# estamos nos referindo a um conjunto de conceitos e padrões
+# que usamos para resolver problemas com objetos.
 
-class Porta:
-    def __init__(self, cor, material, tamanho):
+# Um objeto em Python é uma única coleção de dados (atributos) e comportamento (métodos).
+# Você pode pensar em objetos como coisas reais ao seu redor.
 
-        # Atributos da porta
+'''
+# Uma calculadora pode ser um objeto:
+# Atributos --> cor, tamanho, botões
+# Métodos --> soma, divisão, multiplicação e subtração
+'''
 
-        self.cor = cor
-        self.material = material
-        self.tamanho = tamanho
+# Como você pode notar, os dados (atributos) são sempre substantivos,
+# enquanto os comportamentos (método) são sempre verbos.
 
-        # Métodos da porta
-        
 
-porta1 = Porta('azul','ferro','3.0m')
+class Cookie:
+    # constructor
+    def __init__(self, size, shape, name, taste, chips = 'chocolate'):
+        # instance attributes
+        self.size = size
+        self.shape = shape
+        self.name = name
+        self.taste = taste
+        self.chips = chips
+    # The object is passing itself as a parameter
+    # It is going to bake the Cookie
+    def bake(self):
+        print(f'This {self.name} is being baked with the shape {self.shape} and it\'s taste is {self.taste} with {self.chips} chips')
+        print('Your cookie is already ready!')
+    
 
-print(porta1.cor)
+cookie1 = Cookie(2, 'circle', 'Woman', 'vanilla')
 
+print(cookie1.bake())
+
+# print(id(cookie1))
