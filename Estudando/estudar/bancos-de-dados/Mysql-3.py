@@ -1,3 +1,9 @@
+'''
+the codex - Youtube Class
+18/04/2024
+Python and MySQL - Selecting and Getting Data
+'''
+
 import mysql.connector
 
 # initialize the database

@@ -1,3 +1,9 @@
+'''
+the codex - Youtube Class
+18/04/2024
+Python and MySQL - Creating our Database and Table 
+'''
+
 import mysql.connector
 
 # initialize the database
@@ -13,10 +19,10 @@ mycursor = mydb.cursor()
 
 # every statement I make to create a database and tables on the command prompt
 # will be made here ↓
-mycursor.execute('')
+mycursor.execute('SELECT * FROM students')
 
-# for tb in mycursor:
-#     print(tb)
+for tb in mycursor:
+    print(tb)
 
 # 1- CREATE DATABASE nome_do_banco_de_dados
 # 2- SHOW DATABASE
