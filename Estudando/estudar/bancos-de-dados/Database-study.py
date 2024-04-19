@@ -9,15 +9,14 @@ mydb = mysql.connector.connect(
 )
 # this is how python conects with mysql.
 # this database cursor is like an input on command prompt
-
 mycursor = mydb.cursor()
 
 # every statement I make to create a database and tables on the command prompt
 # will be made here ↓
-mycursor.execute('SHOW TABLES')
+mycursor.execute('')
 
-for tb in mycursor:
-    print(tb)
+# for tb in mycursor:
+#     print(tb)
 
 # 1- CREATE DATABASE nome_do_banco_de_dados
 # 2- SHOW DATABASE
