@@ -14,11 +14,13 @@ mycursor = mydb.cursor()
 
 # every statement I make to create a database and tables on the command prompt
 # will be made here ↓
-mycursor.execute('SHOW DATABASES')
+mycursor.execute('SHOW TABLES')
+
+for tb in mycursor:
+    print(tb)
 
 # 1- CREATE DATABASE nome_do_banco_de_dados
 # 2- SHOW DATABASE
+# 3- CREATE TABLE students(name VARCHAR(255), age INT(10))
+# 4- SHOW TABLES
 
-
-for db in mycursor:
-    print(db)
