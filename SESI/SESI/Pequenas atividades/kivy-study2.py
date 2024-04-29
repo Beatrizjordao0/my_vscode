@@ -4,6 +4,7 @@ from kivy.uix.checkbox import CheckBox
 from kivy.uix.button import Button
 from kivy.uix.label import Label
 from kivy.utils import get_color_from_hex
+from kivy.uix.image import Image
 
 musica = ['Quando estou só',
           'e o choro parece querer chegar',
@@ -65,7 +66,9 @@ class MinhaApp(App):
                     pos_hint={'center_x': 0.5})
         btn.bind(on_press=botao_pressionado)
         layout.add_widget(btn)
-        
+
+        img = Image(source='C:\\Users\\beatr\\Dropbox\\PC\\Downloads\\mama.jpg')
+        layout.add_widget(img)
         return layout
     
 if __name__ == '__main__':
