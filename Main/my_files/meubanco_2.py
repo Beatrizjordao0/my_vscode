@@ -2,11 +2,12 @@ import tkinter as tk
 import tkinter.simpledialog as sd
 import random
 
+
 class JogoFinanceiro:
     def __init__(self, root):
-        self.root = root
-        self.root.title("Jogo do Capitalista")
-        self.root.attributes('-fullscreen', True)  # Define a janela para tela cheia
+        self.janela = root
+        self.janela.title("Jogo do Capitalista")
+        self.janela.attributes('-fullscreen', True)  # Define a janela para tela cheia
 
         self.dinheiro_banco = 500
         self.dinheiro_comigo = 200
@@ -18,41 +19,41 @@ class JogoFinanceiro:
 
     def criar_interface(self):
         # Labels
-        self.label_titulo = tk.Label(self.root, text="JOGO DO CAPITALISTA", fg="purple", font=("Arial", 16, "bold"))
+        self.label_titulo = tk.Label(self.janela, text="JOGO DO CAPITALISTA", fg="purple", font=("Arial", 16, "bold"))
         self.label_titulo.pack(pady=10)
 
-        self.label_dinheiro_comigo = tk.Label(self.root, text=f"Saldo com você: {self.dinheiro_comigo} coins", font=("Arial", 12))
+        self.label_dinheiro_comigo = tk.Label(self.janela, text=f"Saldo com você: {self.dinheiro_comigo} coins", font=("Arial", 12))
         self.label_dinheiro_comigo.pack(pady=5)
 
-        self.label_dinheiro_banco = tk.Label(self.root, text=f"Saldo no banco: {self.dinheiro_banco} coins", font=("Arial", 12))
+        self.label_dinheiro_banco = tk.Label(self.janela, text=f"Saldo no banco: {self.dinheiro_banco} coins", font=("Arial", 12))
         self.label_dinheiro_banco.pack(pady=5)
 
-        self.label_rodada = tk.Label(self.root, text=f"Rodada: {self.rodada}", font=("Arial", 15))
+        self.label_rodada = tk.Label(self.janela, text=f"Rodada: {self.rodada}", font=("Arial", 15))
         self.label_rodada.pack(pady=5)
 
-        self.label_rodadas_sem_deposito = tk.Label(self.root, text=f"Rodadas sem depósito: {self.rodadas_sem_deposito}", font=("Arial", 12))
+        self.label_rodadas_sem_deposito = tk.Label(self.janela, text=f"Rodadas sem depósito: {self.rodadas_sem_deposito}", font=("Arial", 12))
         self.label_rodadas_sem_deposito.pack(side=tk.LEFT, padx=10)
         
-        self.label_multiplicador = tk.Label(self.root, text=f"Multiplicador atual: x1.0", font=("Arial", 12))
+        self.label_multiplicador = tk.Label(self.janela, text=f"Multiplicador atual: x1.0", font=("Arial", 12))
         self.label_multiplicador.pack(side=tk.RIGHT, padx=10)
 
         # Botões
-        self.botao_trabalhar = tk.Button(self.root, text="Trabalhar", command=self.trabalhar, width=30, font=('Arial', 12))
+        self.botao_trabalhar = tk.Button(self.janela, text="Trabalhar", command=self.trabalhar, width=30, font=('Arial', 12))
         self.botao_trabalhar.pack(pady=50)
 
-        self.botao_depositar = tk.Button(self.root, text="Depositar", command=self.depositar, width=30, font=('Arial', 12))
+        self.botao_depositar = tk.Button(self.janela, text="Depositar", command=self.depositar, width=30, font=('Arial', 12))
         self.botao_depositar.pack(pady=50)
 
-        self.botao_investir = tk.Button(self.root, text="Investir", command=self.investir, width=30, font=('Arial', 12))
+        self.botao_investir = tk.Button(self.janela, text="Investir", command=self.investir, width=30, font=('Arial', 12))
         self.botao_investir.pack(pady=50)
 
-        self.botao_sacar = tk.Button(self.root, text="Sacar", command=self.sacar, width=30, font=('Arial', 12))
+        self.botao_sacar = tk.Button(self.janela, text="Sacar", command=self.sacar, width=30, font=('Arial', 12))
         self.botao_sacar.pack(pady=50)
 
-        self.botao_comprar = tk.Button(self.root, text="Comprar", command=self.criar_janela_compra, width=30, font=('Arial', 12))
+        self.botao_comprar = tk.Button(self.janela, text="Comprar", command=self.criar_janela_compra, width=30, font=('Arial', 12))
         self.botao_comprar.pack(pady=20)
 
-        self.botao_sair = tk.Button(self.root, text="Sair", command=self.root.quit, width=30, font=('Arial', 12))
+        self.botao_sair = tk.Button(self.janela, text="Sair", command=self.janela.quit, width=30, font=('Arial', 12))
         self.botao_sair.pack(pady=10)
 
     def trabalhar(self):
@@ -150,7 +151,7 @@ class JogoFinanceiro:
 
         if len(self.carros_comprados) == 3:
             sd.messagebox.showinfo("Parabéns!", "Você comprou todos os carros! Você ganhou o jogo.")
-            self.root.quit()
+            self.janela.quit()
 
 
     def obter_multiplicador(self):
@@ -165,7 +166,7 @@ class JogoFinanceiro:
             return 1.0
 
     def criar_janela_compra(self):
-        self.janela_compra = tk.Toplevel(self.root)
+        self.janela_compra = tk.Toplevel(self.janela)
         self.janela_compra.title("Loja de Carros")
 
         self.label_titulo_compra = tk.Label(self.janela_compra, text="Loja de Carros", font=("Arial", 16, "bold"))

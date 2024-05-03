@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="466b5944-ffe6-460d-ab1a-c9132507ba61" name="Changes" comment="hi">
+      <change afterPath="$PROJECT_DIR$/Coisas_do_SESI/Calculadora/Módulo_operações.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coisas_do_SESI/Calculadora/principal.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PycharmProjects.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PycharmProjects.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/my_files/meubanco_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main/my_files/meubanco_2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SESI/SESI/Calculadora/Módulo_operações.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SESI/SESI/Calculadora/principal.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SESI/SESI/Pequenas atividades/Adulto_ou_nao.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SESI/SESI/Pequenas atividades/Arvore_natal.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SESI/SESI/Pequenas atividades/Escola2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SESI/SESI/Pequenas atividades/Numero_primo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SESI/SESI/Pequenas atividades/crime.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SESI/SESI/Pequenas atividades/dias_da_semana.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SESI/SESI/Pequenas atividades/empresa.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SESI/SESI/Pequenas atividades/escola.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SESI/SESI/Pequenas atividades/número_maior_menor.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SESI/SESI/Pequenas atividades/palavra.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SESI/SESI/Pequenas atividades/todos_os_pares.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SESI/SESI/Pequenas atividades/vogal.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="https/github.com/Beatrizjordao0/my_pycharm.git" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Beatrizjordao0&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="a244c3ca-04d4-43ed-9d0d-1d1a9c5d3479" />
+        <option name="url" value="https://github.com/Beatrizjordao0/my_vscode.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Main/my_files/meubanco_2.py" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2eEf2Hi1kOoEEnKp9NaGkWDBpQo" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Python.calculadora.executor": "Run",
+    "Python.meubanco_2.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "my__pycharm",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/beatr/OneDrive/Área de Trabalho/pycharm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="meubanco_2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PycharmProjects" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.12 (Main)" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Main/my_files" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Main/my_files/meubanco_2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.meubanco_2" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-09665e90c3a7-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.15026.15" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="466b5944-ffe6-460d-ab1a-c9132507ba61" name="Changes" comment="" />
+      <created>1711474450104</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1711474450104</updated>
+    </task>
+    <task id="LOCAL-00001" summary="hi">
+      <option name="closed" value="true" />
+      <created>1711474777985</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1711474777985</updated>
+    </task>
+    <task id="LOCAL-00002" summary="hi">
+      <option name="closed" value="true" />
+      <created>1711474956310</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1711474956310</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="hi" />
+    <option name="LAST_COMMIT_MESSAGE" value="hi" />
+  </component>
+</project>
