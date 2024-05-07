@@ -27,7 +27,8 @@ class LoginPage(BoxLayout):
         self.password_box = BoxLayout(orientation="horizontal", size_hint_y=None, height=30)
         self.vertical_layout.add_widget(self.password_box)
         self.password_box.add_widget(Label(text="Password:", size_hint_x=None, width=100, halign="right"))
-        self.password_input = TextInput(multiline=False, password=True)
+        self.password_input = TextInput(multiline
+                                        =False, password=True)
         self.password_box.add_widget(self.password_input)
         
         # Login button
