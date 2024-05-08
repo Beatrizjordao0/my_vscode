@@ -1,9 +1,11 @@
+'''
+Code with Jonathan 08/05/24
+'''
+
 from kivy.app import App
-from kivy.uix.widget import Widget
+class TheLabApp(App):
+    pass
 
-class My_app(App):
-    def build(self):
-        return
+app = TheLabApp()
 
-
-My_app().run()
+app.run()
