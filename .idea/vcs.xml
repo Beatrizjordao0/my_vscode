@@ -2,5 +2,8 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Telastest" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/linkedin-api" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/mobileapp-python-kivy" vcs="Git" />
   </component>
 </project>
